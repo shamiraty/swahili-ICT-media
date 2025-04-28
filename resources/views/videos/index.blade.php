@@ -19,7 +19,7 @@
             @forelse ($videos as $video)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $video->headingTitle }}</td>
+                    <td class="text-uppercase">{{ $video->headingTitle }}</td>
                     <td>{{ $video->category->name }}</td>
                     <td>{{ $video->created_at->diffForHumans() }}</td>
                     <td>

@@ -36,7 +36,7 @@ class ApiController extends Controller
                 'References' => $video->References,
                 'uploaded_by' => $video->uploaded_by,
                 'thumbnail' => $video->thumbnail,
-                'size' => $video->size,
+               'size' => $video->size ? round($video->size / (1024 * 1024), 2) : null, // Convert bytes to MB and round to 2 decimal places
                 'created_at' => $video->created_at,
                 'updated_at' => $video->updated_at,
                 'playlists' => $video->playlists->map(function ($playlist) {

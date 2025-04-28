@@ -127,6 +127,7 @@
             <div class="spinner-border text-light mt-2" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
+            </div>
         </div>
         @yield('content')
     </div>

@@ -19,8 +19,8 @@
                 @forelse ($documents as $document)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $document->headingTitle }}</td>
-                        <td>{{ $document->category->name }}</td>
+                        <td class="text-uppercase">{{ $document->headingTitle }}</td>
+                        <td class="text-lowercase">{{ $document->category->name }}</td>
                         <td>{{ $document->created_at->diffForHumans() }}</td>
                         <td>
                             <a href="{{ route('documents.show', $document->id) }}" class="btn btn-info btn-sm"><i class="fas fa-eye me-1"></i> View</a>

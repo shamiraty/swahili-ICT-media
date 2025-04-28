@@ -7,7 +7,7 @@
         @csrf
         <div class="mb-3">
     <label for="name" class="form-label">Category Name(max 15)</label>
-    <input type="text" class="form-control" id="name" name="name" maxlength="15" required>
+    <input type="text" class="form-control" id="name" name="name" maxlength="25" required>
 </div>
         <div class="mb-3">
             <label for="date" class="form-label">Date (Optional)</label>

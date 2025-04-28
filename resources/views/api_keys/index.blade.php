@@ -16,11 +16,13 @@
         </div>
     @endif
     <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover mb-0" id="apiKeysTable">
+        <table class="table table-bordered table-striped table-hover mb-0" id="table">
             <thead class="table-primary">
                 <tr>
                     <th>Username</th>
                     <th>Status</th>
+                     <th>Last Login </th>
+                      <th>API POST REQUEST </th>
                     <th class="text-center">Actions</th>
                 </tr>
             </thead>
@@ -29,6 +31,8 @@
                     <tr>
                         <td>{{ $apiKey->username }}</td>
                         <td><span class="badge bg-{{ $apiKey->status ? 'success' : 'danger' }}">{{ $apiKey->status ? 'Active' : 'Inactive' }}</span></td>
+                                <td><span class="">{{ $apiKey->last_used ? $apiKey->last_used->diffForHumans() : 'Never' }}</span></td>
+                            <td><span class="">{{  $apiKey->number_of_requests }}</span></td>
                         <td class="text-center">
                             <div class="btn-group" role="group">
                                 <a href="{{ route('api-keys.show', $apiKey) }}" class="btn btn-sm btn-outline-info" title="View Details">
